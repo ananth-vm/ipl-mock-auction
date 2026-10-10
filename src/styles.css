@@ -119,3 +119,34 @@ footer { flex:0 0 auto; }
 .log-body::-webkit-scrollbar-track { background: #07111f; }
 .log-body::-webkit-scrollbar-thumb { background: #2d4b68; border-radius: 8px; }
 .log-body::-webkit-scrollbar-thumb:hover { background: #3d6387; }
+
+/* Auction range configuration */
+.range-config{width:min(100%,560px);margin:0 auto 22px;text-align:left;border:1px solid var(--line);background:#081523;border-radius:12px;padding:17px 18px}
+.range-config h3{margin:0 0 5px;font-size:16px;color:#e8f3ff}
+.range-config>p{font-size:11px;line-height:1.5;color:var(--muted);margin:0 0 12px}
+.range-row{display:grid;grid-template-columns:100px minmax(0,1fr);gap:12px;align-items:center;padding:7px 0;border-top:1px solid #17283b}
+.range-row>span{display:flex;align-items:center;gap:8px}.range-row b{font-size:11px;color:#8edbff}.range-row small{font-size:9px;color:#6d839a}
+.range-row input{min-width:0;width:100%;background:#050e19;color:#f2f7fc;border:1px solid #2a4058;border-radius:7px;padding:9px 10px;font-size:12px;outline:none}
+.range-row input:focus{border-color:var(--accent)}
+.range-total{display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding-top:10px;border-top:1px solid #203149;color:#93a8be;font-size:11px}.range-total strong{font-size:17px;color:#65e3bd}
+.start-card .primary:disabled{opacity:.45;cursor:not-allowed}
+.log-row{grid-template-columns:minmax(0,1.6fr) .55fr .75fr 22px}
+.unsold-overlay{background:rgba(20,3,9,.76)}
+.unsold-burst{border-color:rgba(255,101,119,.4);background:linear-gradient(145deg,#351824,#100a13 72%)}
+.unsold-burst .sale-label{color:#ff7182;text-shadow:0 4px 20px rgba(255,65,95,.25)}
+.unsold-burst .sale-ring{border-color:rgba(255,101,119,.42)}
+.unsold-burst .ring-two{border-color:rgba(255,181,87,.28)}
+.unsold-burst .sale-confetti{color:#ff7182}
+@media(max-width:650px){.range-config{padding:13px}.range-row{grid-template-columns:75px minmax(0,1fr);gap:7px}.range-row>span{display:grid;gap:2px}.log-row{grid-template-columns:minmax(0,1.5fr) .45fr .7fr 20px}}
+
+/* Inline auction-log editing; no delete action */
+.log-head,.log-row{grid-template-columns:minmax(0,1.6fr) .55fr .75fr 22px}
+.log-row-wrap{border-bottom:1px solid #122438}
+.log-row-wrap .log-row{border-bottom:0}
+.edit-buy,.save-edit,.cancel-edit{width:22px;height:22px;border:1px solid #29415b;background:#102238;color:#8edcff;border-radius:5px;padding:0;display:grid;place-items:center}
+.edit-buy:hover,.save-edit:hover{background:#174667;color:white}
+.log-edit{display:grid;grid-template-columns:1fr 1fr 24px 24px;gap:6px;align-items:end;padding:0 10px 10px}
+.log-edit label{display:grid;gap:4px;color:#8196ad;font-size:9px;text-transform:uppercase;letter-spacing:.5px;min-width:0}
+.log-edit select,.log-edit input{width:100%;min-width:0;background:#07111f;color:#f4f7fb;border:1px solid #2a4058;border-radius:5px;padding:6px;font-size:11px}
+.save-edit{color:#6ee0b8;border-color:#205d4d}.cancel-edit{color:#ff9eaa;border-color:#61313a}
+@media(max-width:650px){.log-head,.log-row{grid-template-columns:minmax(0,1.5fr) .45fr .7fr 20px}.log-edit{grid-template-columns:1fr 1fr 24px 24px}}
